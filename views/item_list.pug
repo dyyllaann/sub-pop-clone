@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1(class='section-title')= title
+
+  div(class='product-grid')
+    each item in item_list
+      div(class='product')
+        p(id=item.format)
+        img(class='product-image' src=item.image)
+        a(href=item.url) #{item.title}
+        |  (#{item.artist.name})
+
+    else
+      div There are no items.

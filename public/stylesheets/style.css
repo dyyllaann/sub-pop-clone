@@ -1,0 +1,279 @@
+body {
+  padding: 0 50px;
+  /* font: 14px futura-pt, Helvetica, Arial, sans-serif; */
+  font-size: 15px;
+  line-height: 1.7;
+  font-family: Futura, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  color:#daa900 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.breadcrumb {
+  margin-left: 0;
+  padding-left: 0;
+  background-color: transparent;
+}
+
+.breadcrumb *, .breadcrumb-item.active {
+  font-size: 0.75em;
+  font-weight: 100;
+  color: #000;
+}
+
+.breadcrumb__sep {
+  margin: 0 10px;
+}
+
+.container-fluid {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.container-xl {
+  max-width: none;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+.header-bar {
+  /* margin-top: -50px; */
+  margin-left: -50px;
+  width: 100vw;
+  background-color: #231f20;
+  height: 49.3px;
+  color: #daa900;
+  display: flex;
+  align-content: center;
+}
+
+.header-bar__module {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  justify-content: end;
+}
+
+.header-bar__module > li {
+  padding: 0 5px;
+}
+
+.header-bar__module > li > a {
+  font: 0.9em futura-pt, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+
+.header-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-nav {
+  margin-top: 30px;
+  background-color: #231f20;
+  /* color: #fff; */
+  /* color: #daa900; */
+}
+
+.header-nav a {
+  padding: 7px 20px 7px 15px;
+}
+
+.header-nav > ul {
+  padding: 10.5px 20%;
+}
+
+.header-nav > ul > li > a {
+  color: #fff;
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero > * {
+  width: 100%;
+}
+
+.product-grid {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+}
+
+.product-image {
+  width: 18vw;
+}
+
+.product-detail__artist {
+  font-size: 1.4667em;
+  line-height: 1.4;
+  color:#daa900;
+  font-weight: 900;
+}
+
+.product-detail__image {
+  width: 100%;
+}
+
+.product-detail__price {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.product-detail__title {
+  font-family: 'futura-pt', sans-serif;
+  font-style: italic;
+  font-size: 2.13333em;
+  line-height: 1.2;
+  color:#000;
+  font-weight: 900;
+  margin: 0 0 15px;
+}
+
+
+
+.section-title {
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 2.13em;
+  letter-spacing: 0.1em;
+  background-color: #231f20;
+  color: #fff;
+  font-weight: 700;
+  padding-left: 2%;
+  padding-top: .25%;
+  padding-bottom: .25%;
+}
+
+.selector-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.selector {
+  width: 50%;
+  margin: 0 0 1em;
+  border: 1px solid rgba(0, 0, 0, .15);
+  color: #333;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 2px;
+}
+
+.material-symbols-sharp {
+  color:#daa900;
+  font-size: 16px !important;
+  width: 0.5em;
+  height: 0.5em;
+  line-height: 0.1;
+  font-variation-settings: 'opsz' 24;
+}
+
+.detail {
+  font-weight: 700;
+}
+
+#AddToCart {
+  text-transform: uppercase;
+  font-size: 1.1333em;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  background-color: #231f20;
+  color: #daa900;
+  width: 50%;
+  padding: 14px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+/* .row {
+  width: 100%;
+} */
+
+#logo {
+  width: 500px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  text-transform: uppercase;
+  color: white;
+  padding: 6px;
+  /* font-size: 16px; */
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  /* top: 10px; */
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* margin-top:10px; */
+  /* top: 34px; */
+  background-color: #000c;
+  min-width: 160px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: 0.75em;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color:#daa900;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

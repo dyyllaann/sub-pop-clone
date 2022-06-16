@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1(class='section-title')= title
+
+  div(class='artist-grid')
+    each artist in artist_list
+        //- a(href=item.url) #{item.artist.name}
+        a(href='#') #{artist.name}
+
+    else
+      div There are no items. Something's not right...

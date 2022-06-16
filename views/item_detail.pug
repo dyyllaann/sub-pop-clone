@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  div(class='container-xl')
+    // Breadcrumb
+    nav(aria-label='breadcrumb')
+      ol(class='breadcrumb')
+        li(class='breadcrumb-item')
+        a(href="#") Home
+        span(class='breadcrumb__sep') › 
+        li(class='breadcrumb-item active' aria-current="page") #{title}
+
+    div(class='row')
+      div(class='col')
+        img(class='product-detail__image' src=image)
+      div(class='col') 
+        h3(class='product-detail__artist') #{artist}
+        h1(class='product-detail__title') #{title}
+        h2(class='product-detail__price') #{price}
+
+        div(class='form-wrapper')
+          form(action='/cart/add')
+            div(class='selector-wrapper')
+              label(for='formatSelect') Format
+              select(class='selector')
+                option(value='Digital') Digital 
+            div(class='selector-wrapper')
+              label(for='formatSelect') Quantity
+              input(class='selector' type='number', name='Quantity' value='1')
+            button(type='submit' id='AddToCart')
+              span Add to Cart 
+
+        div(class='productDetails')
+          span(class='detail') Release date: 
+          span #{releaseDate}
+          br
+          span(class='detail') Label: 
+          span #{label}
+        div(class='productDetails')
+          p #{description}

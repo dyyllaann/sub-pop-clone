@@ -1,0 +1,79 @@
+doctype html
+html(lang='en')
+  head
+    title= title + ' – Sub Pop Mega Mart'
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js", integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <link rel="stylesheet" href="https://use.typekit.net/zud4opj.css">
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")  
+  body
+    div(class='header-bar')
+      ul(class='header-bar__module')
+        li 
+          a Log in
+        li or 
+        li 
+          a Create account
+    div(class='header')
+      div(class='header-logo')
+        img(src="http://localhost:3000/images/MegaMartHeader_2020_540x.webp", alt="Sub Pop MegaMart Logo", id="logo")
+      div(class='header-nav')
+        ul(class='navbar')
+          //- li
+            //- a(href='/catalog/artists') Artists
+            //- span(class='material-symbols-sharp') expand_more
+          div(class='dropdown')
+            a(href='/catalog/items' class='dropbtn') Music
+            div(class='dropdown-content')
+              a(href='#') Pre Orders
+              a(href='#') New Releases
+              a(href='/catalog/sub-pop-releases') Sub Pop
+              a(href='/catalog/hardly-art') Hardly Art
+              a(href='/catalog/other-labels') Other Labels
+              a(href='/catalog/or-perhaps-comedy') Or Perhaps Comedy          
+          div(class='dropdown')
+            a(href='/catalog/artists' class='dropbtn') Artists
+            div(class='dropdown-content')
+              a(href="/catalog/featured-artists") Featured Artists
+              a(href='/catalog/artists') Artists A-Z
+          li
+            a(href='/catalog/apparel') Apparel
+          li
+            a(href='/catalog/goods') Goods
+          li
+            a(href='/catalog/clearance') Clearance
+          li
+            a(href='/catalog/gift-cards') Gift Cards
+    div(class='container-fluid')
+      div(class='row')
+        block content
+        //- div(class='col-sm-2')
+          block sidebar
+            ul(class='sidebar-nav')
+              li
+                a(href='/catalog') Home
+              li
+                a(href='/catalog/items') All items
+              li
+                a(href='/catalog/artists') All artists
+              //- li
+              //-   a(href='/catalog/genres') All genres
+              //- li
+              //-   a(href='/catalog/iteminstances') All item-instances
+              li
+                hr
+              li
+                a(href='/catalog/artist/create') Create new artist
+              //- li
+              //-   a(href='/catalog/genre/create') Create new genre
+              li
+                a(href='/catalog/item/create') Create new item
+              //- li
+              //-   a(href='/catalog/iteminstance/create') Create new item instance (copy)
+
+        //- div(class='col-sm-10')
+          block content
