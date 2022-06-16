@@ -39,25 +39,25 @@ router.get("/items", item_controller.item_list);
 /// ARTIST ROUTES ///
 
 // GET request for creating Artist. NOTE This must come before route for id (i.e. display artist).
-router.get("/artist/create", artist_controller.artist_create_get);
+router.get("/artists/create", artist_controller.artist_create_get);
 
 // POST request for creating Artist.
-router.post("/artist/create", artist_controller.artist_create_post);
+router.post("/artists/create", artist_controller.artist_create_post);
 
 // GET request to delete Artist.
-router.get("/artist/:id/delete", artist_controller.artist_delete_get);
+router.get("/artists/:id/delete", artist_controller.artist_delete_get);
 
 // POST request to delete Artist.
-router.post("/artist/:id/delete", artist_controller.artist_delete_post);
+router.post("/artists/:id/delete", artist_controller.artist_delete_post);
 
 // GET request to update Artist.
-router.get("/artist/:id/update", artist_controller.artist_update_get);
+router.get("/artists/:id/update", artist_controller.artist_update_get);
 
 // POST request to update Artist.
-router.post("/artist/:id/update", artist_controller.artist_update_post);
+router.post("/artists/:id/update", artist_controller.artist_update_post);
 
 // GET request for one Artist.
-router.get("/artist/:id", artist_controller.artist_detail);
+router.get("/artists/:id", artist_controller.artist_detail);
 
 // GET request for list of all Artists.
 router.get("/artists", artist_controller.artist_list);

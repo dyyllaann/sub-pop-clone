@@ -6,7 +6,9 @@ block content
   div(class='artist-grid')
     each artist in artist_list
         //- a(href=item.url) #{item.artist.name}
-        a(href='#') #{artist.name}
+        //- a(href=`${artist.url}` class='artist-grid__item') #{artist.name}
+        a(href= artist.url class='artist-grid__item') #{artist.name}
+        //- a(href='#' class='artist-grid__item') #{artist.name} #{artist.url}
 
     else
       div There are no items. Something's not right...

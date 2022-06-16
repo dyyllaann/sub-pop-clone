@@ -23,6 +23,15 @@ ul {
   list-style: none;
 }
 
+.artist-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-grid__item {
+  color:#daa900;
+}
+
 .breadcrumb {
   margin-left: 0;
   padding-left: 0;
@@ -87,23 +96,31 @@ ul {
 }
 
 .header-nav {
+  width: 100%;
   margin-top: 30px;
   background-color: #231f20;
   /* color: #fff; */
   /* color: #daa900; */
 }
 
-.header-nav a {
+.navbar {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.header-nav li, ul {
   padding: 7px 20px 7px 15px;
 }
 
 .header-nav > ul {
-  padding: 10.5px 20%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .header-nav > ul > li > a {
   color: #fff;
-  font-size: 1.25em;
+  font-size: 1.133em;
   letter-spacing: 0.1em;
   font-weight: 800;
   text-transform: uppercase;
@@ -235,7 +252,7 @@ ul {
   color: white;
   padding: 6px;
   /* font-size: 16px; */
-  font-size: 1.25em;
+  font-size: 1.133em;
   letter-spacing: 0.1em;
   font-weight: 800;
   border: none;

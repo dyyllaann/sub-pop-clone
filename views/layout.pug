@@ -20,24 +20,25 @@ html(lang='en')
           a Create account
     div(class='header')
       div(class='header-logo')
-        img(src="http://localhost:3000/images/MegaMartHeader_2020_540x.webp", alt="Sub Pop MegaMart Logo", id="logo")
+        a(href="/catalog")
+          img(src="http://localhost:3000/images/MegaMartHeader_2020_540x.webp", alt="Sub Pop MegaMart Logo", id="logo")
       div(class='header-nav')
         ul(class='navbar')
           //- li
             //- a(href='/catalog/artists') Artists
             //- span(class='material-symbols-sharp') expand_more
-          div(class='dropdown')
+          ul(class='dropdown')
             a(href='/catalog/items' class='dropbtn') Music
-            div(class='dropdown-content')
+            li(class='dropdown-content')
               a(href='#') Pre Orders
               a(href='#') New Releases
               a(href='/catalog/sub-pop-releases') Sub Pop
               a(href='/catalog/hardly-art') Hardly Art
               a(href='/catalog/other-labels') Other Labels
               a(href='/catalog/or-perhaps-comedy') Or Perhaps Comedy          
-          div(class='dropdown')
+          ul(class='dropdown')
             a(href='/catalog/artists' class='dropbtn') Artists
-            div(class='dropdown-content')
+            li(class='dropdown-content')
               a(href="/catalog/featured-artists") Featured Artists
               a(href='/catalog/artists') Artists A-Z
           li

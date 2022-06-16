@@ -8,7 +8,8 @@ var ArtistSchema = new Schema({
 
 // Virtual for artist's URL
 ArtistSchema.virtual("url").get(function () {
-	return "/catalog/artist/" + this._id;
+	// console.log(this._id);
+	return "/catalog/artists/" + this._id;
 });
 
 //Export model

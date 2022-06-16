@@ -12,7 +12,7 @@ exports.artist_list = function (req, res) {
 		// .populate('artist')
 		.exec(function (err, list_artists) {
 			if (err) { return next(err); }
-			res.render('artist_list', { title: 'All Artists', artist_list: list_artists });
+			res.render('artist_list', { title: 'All Artists', artist_list: list_artists, id: this.url });
 		}); 
 };
 
