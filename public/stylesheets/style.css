@@ -1,5 +1,5 @@
 body {
-  padding: 0 50px;
+  padding: 0 30px;
   /* font: 14px futura-pt, Helvetica, Arial, sans-serif; */
   font-size: 15px;
   line-height: 1.7;
@@ -63,7 +63,7 @@ ul {
 
 .header-bar {
   /* margin-top: -50px; */
-  margin-left: -50px;
+  margin-left: -30px;
   width: 100vw;
   background-color: #231f20;
   height: 49.3px;
@@ -89,24 +89,19 @@ ul {
 }
 
 .header-logo {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 
 .header-nav {
-  width: 100%;
   margin-top: 30px;
   background-color: #231f20;
-  /* color: #fff; */
-  /* color: #daa900; */
 }
 
 .navbar {
-  width: 100%;
   padding: 0;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .header-nav li, ul {
@@ -137,21 +132,38 @@ ul {
 .product-grid {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-auto-rows: 45%;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+@media screen and (min-width: 400px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 0.5fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 0.5fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(5, 0.5fr);
+  }
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  flex: 0;
+  text-align: center;
 }
 
 .product-image {
-  width: 18vw;
+  max-width: 100%;
 }
 
 .product-detail__artist {
@@ -238,9 +250,10 @@ ul {
   margin-bottom: 30px;
 }
 
-/* .row {
-  width: 100%;
-} */
+.row {
+  margin-right: -2px;
+  margin-left: -2px;
+}
 
 #logo {
   width: 500px;
