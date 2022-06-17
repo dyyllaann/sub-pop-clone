@@ -12,8 +12,8 @@ var ItemSchema = new Schema({
 	stockAmount: { type: String },
 	label: { type: String },
 	artist: { type: Schema.Types.ObjectId, ref: "Artist", required: true },
-	length: { type: String },
-	genre: { type: String },
+	category: { type: String },
+	variations: { type: Array },
 	releaseDate: { type: Date },
 });
 
@@ -26,7 +26,6 @@ ItemSchema.virtual("url").get(function () {
 
 ItemSchema.virtual("releaseDateFormatted").get(function () {
 	return this.releaseDate
-		// ? DateTime.fromJSDate(this.releaseDate).toLocaleString(DateTime.DATE_MED)
 		? DateTime.fromJSDate(this.releaseDate).toFormat('MMMM d, yyyy')
 		: "Not available";
 });

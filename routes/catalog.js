@@ -7,6 +7,7 @@ var artist_controller = require("../controllers/artistController");
 var subpop_releases = require("../controllers/subpop_releasesController");
 var item_detail_controller = require("../controllers/itemDetailController");
 var search_controller = require("../controllers/searchController");
+var apparel_controller = require("../controllers/apparelController");
 
 /// ITEM ROUTES ///
 
@@ -67,6 +68,11 @@ router.get("/artists", artist_controller.artist_list);
 
 // GET request for list of all SUB POP RELEASES items.
 router.get("/sub-pop-releases", subpop_releases.item_list);
+
+// APPAREL ROUTES // 
+
+// GET request for list of all APPAREL items.
+router.get("/apparel", apparel_controller.item_list);
 
 // /// GENRE ROUTES ///
 
