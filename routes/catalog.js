@@ -6,6 +6,7 @@ var item_controller = require("../controllers/itemController");
 var artist_controller = require("../controllers/artistController");
 var subpop_releases = require("../controllers/subpop_releasesController");
 var item_detail_controller = require("../controllers/itemDetailController");
+var search_controller = require("../controllers/searchController");
 
 /// ITEM ROUTES ///
 
@@ -56,8 +57,8 @@ router.get("/artists/:id/update", artist_controller.artist_update_get);
 // POST request to update Artist.
 router.post("/artists/:id/update", artist_controller.artist_update_post);
 
-// GET request for one Artist.
-router.get("/artists/:id", artist_controller.artist_detail);
+// GET request for one Artist / SEARCH
+router.get("/artists/:id", search_controller.item_list);
 
 // GET request for list of all Artists.
 router.get("/artists", artist_controller.artist_list);
