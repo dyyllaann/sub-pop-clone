@@ -35,12 +35,12 @@ exports.index = function (req, res) {
 
 // Display list of all items.
 exports.item_list = function (req, res) {
-	Item.find({}, 'title image')
+	Item.find({category: "album"}, 'title image price')
 		.sort({title : 1})
 		.populate('artist')
 		.exec(function (err, list_items) {
 			if (err) { return next(err); }
-			res.render('item_list', { title: 'Item List', item_list: list_items });
+			res.render('item_list', { title: 'All Music', item_list: list_items });
 		}); 
 };
 

@@ -6,9 +6,12 @@ block content
   div(class='product-grid')
     each item in item_list
       div(class='product')
-        p(id=item.format)
-        img(class='product-image' src=item.image)
-        a(href=item.url) #{item.title}
-        |  (#{item.artist.name})
+        a(href=item.url) 
+          p(id=item.format)
+          img(class='product-image' src=item.image)
+          p(class='product-title') #{item.title}
+          p(class='product-artist') #{item.artist.name}
+          p(class='product-price') #{item.priceFormatted}
     else
-      div There are no items.
+      div
+        p No items found!

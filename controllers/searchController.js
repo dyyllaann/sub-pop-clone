@@ -78,7 +78,7 @@ exports.item_list = function(req, res, next) {
               .exec(callback)
         },
         artist_items: function(callback) {
-          Item.find({ 'artist': req.params.id },'title image')
+          Item.find({ 'artist': req.params.id },'title image price')
 					.sort({ title: 1 })
 					.populate("artist")
           .exec(callback)

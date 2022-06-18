@@ -162,8 +162,32 @@ ul {
   text-align: center;
 }
 
+.product * {
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
 .product-image {
   max-width: 100%;
+}
+
+.product-title {
+  font-size: 0.9em;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #000;
+}
+
+.product-artist {
+  font-size: 0.85em;
+  line-height: 1.4;
+  font-weight: 200;
+  color: #000;
+}
+
+.product-price {
+  font-size: 0.75em;
+  line-height: 1.5;
 }
 
 .product-detail__artist {
