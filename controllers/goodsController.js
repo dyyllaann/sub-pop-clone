@@ -24,13 +24,13 @@ exports.index = function (req, res) {
 
 // Display list of all results.
 exports.item_list = function (req, res) {
-	Item.find({ label: 'Sub Pop', category: 'album' }, "title image")
+	Item.find({ category: 'goods' }, "title image")
 		.sort({ title: 1 })
 		.populate("artist")
 		.exec(function (err, list_items) {
 			if (err) {
 				return next(err);
 			}
-			res.render("item_list", { title: "Sub Pop Releases", item_list: list_items });
+			res.render("item_list", { title: "Goods", item_list: list_items });
 		});
 };
