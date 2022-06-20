@@ -96,6 +96,11 @@ router.get("/pre-orders", item_controller.pre_order_list);
 // GET request for list of all CLEARANCE items.
 router.get("/hardly-art", item_controller.hardly_art_list);
 
+// OTHER LABELS ROUTES //
+
+// GET request for list of all CLEARANCE items.
+router.get("/other-labels", item_controller.other_labels_list);
+
 
 // /// GENRE ROUTES ///
 

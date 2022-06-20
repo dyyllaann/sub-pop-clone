@@ -100,6 +100,19 @@ exports.hardly_art_list = function (req, res) {
 		});
 };
 
+// Display search results for HARDLY ART items.
+exports.other_labels_list = function (req, res) {
+	Item.find({ label: { $nin: ['Sub Pop', 'Hardly Art', 'Or Perhaps Comedy'] } }, "title image")
+		.sort({ title: 1 })
+		.populate("artist")
+		.exec(function (err, list_items) {
+			if (err) {
+				return next(err);
+			}
+			res.render("item_list", { title: "Other Labels", item_list: list_items });
+		});
+};
+
 // Display item create form on GET.
 exports.item_create_get = function (req, res) {
 	res.send("NOT IMPLEMENTED: Item create GET");
