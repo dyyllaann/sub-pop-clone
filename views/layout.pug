@@ -14,30 +14,32 @@ html(lang='en')
     div(class='header-bar')
       ul(class='header-bar__module')
         li 
-          a Log in
+          a(href='/login') Log in
         li or 
         li 
-          a Create account
+          a(href='/create-account') Create account
     div(class='header')
       div(class='header-logo')
         a(href="/catalog")
           img(src="http://localhost:3000/images/MegaMartHeader_2020_540x.webp", alt="Sub Pop MegaMart Logo", id="logo")
       div(class='header-nav')
         ul(class='navbar')
-          ul(class='dropdown')
-            a(href='/catalog/items' class='dropbtn') Music
-            li(class='dropdown-content')
-              a(href='#') Pre Orders
-              a(href='#') New Releases
-              a(href='/catalog/sub-pop-releases') Sub Pop
-              a(href='/catalog/hardly-art') Hardly Art
-              a(href='/catalog/other-labels') Other Labels
-              a(href='/catalog/or-perhaps-comedy') Or Perhaps Comedy          
-          ul(class='dropdown')
-            a(href='/catalog/artists' class='dropbtn') Artists
-            li(class='dropdown-content')
-              a(href="/catalog/featured-artists") Featured Artists
-              a(href='/catalog/artists') Artists A-Z
+          li
+            ul(class='navbar__dropdown')
+              a(href='/catalog/items' class='navbar__dropbtn') Music
+              li(class='navbar__dropdown-content')
+                a(href='#') Pre Orders
+                a(href='#') New Releases
+                a(href='/catalog/sub-pop-releases') Sub Pop
+                a(href='/catalog/hardly-art') Hardly Art
+                a(href='/catalog/other-labels') Other Labels
+                a(href='/catalog/or-perhaps-comedy') Or Perhaps Comedy          
+          li  
+            ul(class='navbar__dropdown')
+              a(href='/catalog/artists' class='navbar__dropbtn') Artists
+              li(class='navbar__dropdown-content')
+                a(href="/catalog/featured-artists") Featured Artists
+                a(href='/catalog/artists') Artists A-Z
           li
             a(href='/catalog/apparel') Apparel
           li
