@@ -15,7 +15,8 @@ html(lang='en')
       ul(class='header-bar__module')
         li 
           a(href='/login') Log in
-        li or 
+        li 
+          a or 
         li 
           a(href='/create-account') Create account
     div(class='header')
@@ -33,7 +34,7 @@ html(lang='en')
                 a(href='/catalog/sub-pop-releases') Sub Pop
                 a(href='/catalog/hardly-art') Hardly Art
                 a(href='/catalog/other-labels') Other Labels
-                a(href='/catalog/or-perhaps-comedy') Or Perhaps Comedy          
+                a(href='/catalog/comedy') Or Perhaps Comedy          
           li  
             ul(class='navbar__dropdown')
               a(href='/catalog/artists' class='navbar__dropbtn') Artists
@@ -77,3 +78,17 @@ html(lang='en')
 
         //- div(class='col-sm-10')
           block content
+    div(class='footer')
+      div
+        h1 Attention, please!
+        br
+        p This website is a CLONE of Sub Pop's online store. This CLONE is not now, nor will ever be, set up to receive any payment or collect any data. 
+          | All materials are property of Sub Pop and any copyright infringement is unintended! This website was created solely as a practice project. 
+        p This CLONE was written from scratch using Express, Node, and MongoDB with Mongoose. 
+        p In addition to the features of the original Sub Pop Mega Mart website, this CLONE features a fully functional inventory management system that is revealed when a user logs in as an admin. 
+          | The inventory management system allows a user to create and update item listings. However, item deletion is disabled.
+        p
+          strong Did I mention this is NOT the REAL Sub Pop website? 
+        br 
+        p To visit and support the REAL Sub Pop, visit 
+          a(href="https://megamart.subpop.com/") https://megamart.subpop.com.

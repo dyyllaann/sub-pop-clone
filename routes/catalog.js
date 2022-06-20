@@ -101,6 +101,11 @@ router.get("/hardly-art", item_controller.hardly_art_list);
 // GET request for list of all CLEARANCE items.
 router.get("/other-labels", item_controller.other_labels_list);
 
+// OR PERHAPS COMEDY ROUTES //
+
+// GET request for list of all CLEARANCE items.
+router.get("/comedy", item_controller.comedy_list);
+
 
 // /// GENRE ROUTES ///
 

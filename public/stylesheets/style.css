@@ -1,9 +1,8 @@
 body {
   padding: 0 30px;
-  /* font: 14px futura-pt, Helvetica, Arial, sans-serif; */
   font-size: 15px;
   line-height: 1.7;
-  font-family: Futura, sans-serif;
+  font-family: Futura, futura-pt, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #000;
@@ -74,18 +73,23 @@ ul {
 .header-bar__module {
   flex: 1;
   align-self: center;
-  display: flex;
-  justify-content: end;
+  text-align: right;
+  margin: 0;
+  margin-right: 316px;
 }
 
 .header-bar__module > li {
-  padding: 0 5px;
+  margin-top: 50%;
+  display: inline;
+  font-weight: 600;
+  font-size: 1.167em;
+  letter-spacing: 00.005em;
+  padding: 0 2.5px;
 }
 
 .header-bar__module > li > a {
   color:#daa900;
   font: 0.9em futura-pt, Helvetica, Arial, sans-serif;
-  font-weight: 900;
 }
 
 .header-logo {
@@ -137,7 +141,7 @@ ul {
   display: none;
   position: absolute;
   background-color: #000c;
-  min-width: 180px;
+  min-width: 200px;
   z-index: 1;
 }
 
@@ -336,4 +340,17 @@ ul {
 
 #logo {
   width: 500px;
+}
+
+.footer {
+  width: 100vw;
+  margin-top: 300px;
+  margin-left: -30px;
+  color: #fff;
+  background-color: #231f20;
+  padding-bottom: 15px;
+}
+
+.footer > div {
+  margin: 0 100px;
 }

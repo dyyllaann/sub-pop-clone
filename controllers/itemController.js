@@ -100,7 +100,20 @@ exports.hardly_art_list = function (req, res) {
 		});
 };
 
-// Display search results for HARDLY ART items.
+// Display search results for OR PERHAPS COMEDY items.
+exports.comedy_list = function (req, res) {
+	Item.find({ label: 'Or Perhaps Comedy' }, "title image")
+		.sort({ title: 1 })
+		.populate("artist")
+		.exec(function (err, list_items) {
+			if (err) {
+				return next(err);
+			}
+			res.render("item_list", { title: "Or Perhaps Comedy", item_list: list_items });
+		});
+};
+
+// Display search results for OTHER LABELS items.
 exports.other_labels_list = function (req, res) {
 	Item.find({ label: { $nin: ['Sub Pop', 'Hardly Art', 'Or Perhaps Comedy'] } }, "title image")
 		.sort({ title: 1 })
