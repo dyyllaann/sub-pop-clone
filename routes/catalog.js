@@ -9,7 +9,7 @@ var item_detail_controller = require("../controllers/itemDetailController");
 var search_controller = require("../controllers/searchController");
 var apparel_controller = require("../controllers/apparelController");
 var goods_controller = require("../controllers/goodsController");
-
+var clearance_controller = require("../controllers/clearanceController");
 
 /// ITEM ROUTES ///
 
@@ -78,6 +78,9 @@ router.get("/apparel", apparel_controller.item_list);
 
 // GET request for list of all GOODS items.
 router.get("/goods", goods_controller.item_list);
+
+// GET request for list of all CLEARANCE items.
+router.get("/clearance", clearance_controller.item_list);
 
 // /// GENRE ROUTES ///
 
