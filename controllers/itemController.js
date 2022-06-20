@@ -32,7 +32,6 @@ exports.index = function (req, res) {
 	);
 };
 
-
 // Display list of all items.
 exports.item_list = function (req, res) {
 	Item.find({category: "album"}, 'title image price')
@@ -52,11 +51,6 @@ exports.item_detail = function(req, res, next) {
               .populate('artist')
               .exec(callback);
         },
-        // item_instance: function(callback) {
-
-        //   Item.find({ 'item': req.params.id })
-        //   .exec(callback);
-        // },
     }, function(err, results) {
         if (err) { return next(err); }
         if (results.item==null) { // No results.
@@ -75,27 +69,23 @@ exports.item_detail = function(req, res, next) {
 					stockAmount: results.item.stockAmount,
 					label: results.item.label,
 					artist: results.item.artist.name,
-					// releaseDate: Date(results.item.releaseDate).toString(),
 					releaseDate: results.item.releaseDateFormatted,
-					// item_instances: results.item_instance,
 				} );
     });
-
 };
 
-
-// // Display list of all items.
-// exports.item_list = function (req, res) {
-// 	Item.find({}, "title image description price format label stockAmount artist releaseDate")
-// 		.sort({ title: 1 })
-// 		.populate("artist")
-// 		.exec(function (err, list_items) {
-// 			if (err) {
-// 				return next(err);
-// 			}
-// 			res.render("item_list", { title: "Item List", item_list: list_items });
-// 		});
-// };
+// Display search results for PRE ORDER items.
+exports.pre_order_list = function (req, res) {
+	Item.find({ category: 'pre-order' }, "title image")
+		.sort({ title: 1 })
+		.populate("artist")
+		.exec(function (err, list_items) {
+			if (err) {
+				return next(err);
+			}
+			res.render("item_list", { title: "Pre Orders", item_list: list_items });
+		});
+};
 
 // Display item create form on GET.
 exports.item_create_get = function (req, res) {

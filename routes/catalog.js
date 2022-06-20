@@ -76,11 +76,21 @@ router.get("/sub-pop-releases", subpop_releases.item_list);
 // GET request for list of all APPAREL items.
 router.get("/apparel", apparel_controller.item_list);
 
+// GOODS ROUTES //
+
 // GET request for list of all GOODS items.
 router.get("/goods", goods_controller.item_list);
 
+// CLEARANCE ROUTES //
+
 // GET request for list of all CLEARANCE items.
 router.get("/clearance", clearance_controller.item_list);
+
+// PRE ORDER ROUTES //
+
+// GET request for list of all CLEARANCE items.
+router.get("/pre-orders", item_controller.pre_order_list);
+
 
 // /// GENRE ROUTES ///
 
