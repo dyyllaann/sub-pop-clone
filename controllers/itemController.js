@@ -87,6 +87,19 @@ exports.pre_order_list = function (req, res) {
 		});
 };
 
+// Display search results for HARDLY ART items.
+exports.hardly_art_list = function (req, res) {
+	Item.find({ label: 'Hardly Art' }, "title image")
+		.sort({ title: 1 })
+		.populate("artist")
+		.exec(function (err, list_items) {
+			if (err) {
+				return next(err);
+			}
+			res.render("item_list", { title: "Hardly Art", item_list: list_items });
+		});
+};
+
 // Display item create form on GET.
 exports.item_create_get = function (req, res) {
 	res.send("NOT IMPLEMENTED: Item create GET");

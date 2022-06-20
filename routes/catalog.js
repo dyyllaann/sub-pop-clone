@@ -91,6 +91,11 @@ router.get("/clearance", clearance_controller.item_list);
 // GET request for list of all CLEARANCE items.
 router.get("/pre-orders", item_controller.pre_order_list);
 
+// HARDLY ART ROUTES //
+
+// GET request for list of all CLEARANCE items.
+router.get("/hardly-art", item_controller.hardly_art_list);
+
 
 // /// GENRE ROUTES ///
 
