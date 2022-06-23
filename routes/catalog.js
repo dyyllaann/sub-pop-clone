@@ -107,6 +107,11 @@ router.get("/other-labels", item_controller.other_labels_list);
 // GET request for list of all CLEARANCE items.
 router.get("/comedy", item_controller.comedy_list);
 
+// GIFT CARD ROUTES //
+
+// GET request for list of all CLEARANCE items.
+router.get("/gift-cards", item_controller.gift_cards);
+
 
 // /// GENRE ROUTES ///
 

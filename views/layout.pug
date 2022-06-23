@@ -54,6 +54,8 @@ html(lang='en')
     div(class='container-fluid')
       div(class='row')
         block content
+        if message
+          p #{message}
     div(class='footer')
       div
         br

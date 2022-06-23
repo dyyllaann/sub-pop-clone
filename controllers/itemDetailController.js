@@ -8,18 +8,9 @@ exports.index = function (req, res) {
 			item_count: function (callback) {
 				Item.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
 			},
-			// item_instance_count: function (callback) {
-			// 	ItemInstance.countDocuments({}, callback);
-			// },
-			// item_instance_available_count: function (callback) {
-			// 	ItemInstance.countDocuments({ status: "Available" }, callback);
-			// },
 			artist_count: function (callback) {
 				Artist.countDocuments({}, callback);
 			},
-			// genre_count: function (callback) {
-			// 	Genre.countDocuments({}, callback);
-			// },
 		},
 		function (err, results) {
 			res.render("index", {
@@ -42,19 +33,6 @@ exports.item_list = function (req, res) {
 			}
 			res.render("item_list", { title: "Item List", item_list: list_items });
 		});
-};
-
-// Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
-
-  BookInstance.find()
-    .populate('book')
-    .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
-      // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
-    });
-
 };
 
 // Display detail page for a specific item.

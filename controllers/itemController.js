@@ -3,11 +3,11 @@ var Artist = require("../models/artist");
 // var ItemDetail = require("../models/itemDetail");
 var async = require("async");
 
-exports.login = function () {
-	render("login", {
-		title: "Log In"
-	})
-}
+// exports.login = function () {
+// 	render("login", {
+// 		title: "Log In"
+// 	})
+// }
 
 exports.index = function (req, res) {
 	async.parallel(
@@ -130,6 +130,13 @@ exports.other_labels_list = function (req, res) {
 			}
 			res.render("item_list", { title: "Other Labels", item_list: list_items });
 		});
+};
+
+// Display detail page for GIFT CARDS.
+exports.gift_cards = function (req, res) {
+	res.render("layout", {
+		message: "Gift cards not currently available."
+	});
 };
 
 // Display item create form on GET.

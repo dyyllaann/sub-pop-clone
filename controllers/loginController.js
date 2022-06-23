@@ -5,7 +5,9 @@ var async = require("async");
 // validationResult = validator.validationResult();
 
 exports.login = function (req, res) {
-	res.render("login")
+	res.render("login", {
+		title: "Account"
+	})
 };
 
 // exports.login_post = function (req, res) {
@@ -16,5 +18,7 @@ exports.login = function (req, res) {
 // }
 
 exports.info = function (req, res) {
-	res.render("info");
+	res.render("info", {
+		title: "Login Info"
+	});
 };
