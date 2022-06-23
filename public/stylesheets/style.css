@@ -109,7 +109,7 @@ ul {
 }
 
 .navbar li {
-  padding: 4px;
+  padding: 5px;
 }
 
 .navbar ul {
@@ -140,6 +140,7 @@ ul {
 .navbar__dropdown-content {
   display: none;
   position: absolute;
+  margin-top: 5px;
   background-color: #000c;
   min-width: 200px;
   z-index: 1;
