@@ -3,6 +3,12 @@ var Artist = require("../models/artist");
 // var ItemDetail = require("../models/itemDetail");
 var async = require("async");
 
+exports.login = function () {
+	render("login", {
+		title: "Log In"
+	})
+}
+
 exports.index = function (req, res) {
 	async.parallel(
 		{
