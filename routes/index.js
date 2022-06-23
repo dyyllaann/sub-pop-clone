@@ -6,4 +6,9 @@ router.get('/', function(req, res) {
   res.redirect('/catalog');
 });
 
+// GET home page.
+// router.get('/', function(req, res) {
+//   res.redirect('/');
+// });
+
 module.exports = router;

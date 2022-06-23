@@ -30,7 +30,7 @@ exports.index = function (req, res) {
 		},
 		function (err, results) {
 			res.render("index", {
-				title: "Sub Pop MegaMart",
+				title: "Sub Pop Mega Mart",
 				error: err,
 				data: results,
 			});

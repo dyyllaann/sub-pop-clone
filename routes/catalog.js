@@ -10,14 +10,12 @@ var search_controller = require("../controllers/searchController");
 var apparel_controller = require("../controllers/apparelController");
 var goods_controller = require("../controllers/goodsController");
 var clearance_controller = require("../controllers/clearanceController");
+var login_controller = require("../controllers/loginController");
 
 /// ITEM ROUTES ///
 
 // GET catalog home page.
 router.get("/", item_controller.index);
-
-// GET login page.
-router.get("/login", item_controller.login);
 
 // GET request for creating a Item. NOTE This must come before routes that display Item (uses id).
 router.get("/item/create", item_controller.item_create_get);
