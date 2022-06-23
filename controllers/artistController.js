@@ -16,6 +16,14 @@ exports.artist_list = function (req, res) {
 		}); 
 };
 
+// Display page for FEATURED ARTISTS.
+exports.featured_artists = function (req, res) {
+	res.render("layout", {
+		title: "Featured Artists",
+		message: "Featured artists not currently available."
+	});
+};
+
 // Display detail page for a specific Artist.
 exports.artist_detail = function (req, res) {
 	res.send("NOT IMPLEMENTED: Artist detail: " + req.params.id);

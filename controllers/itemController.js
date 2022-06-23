@@ -82,7 +82,7 @@ exports.item_detail = function(req, res, next) {
 
 // Display search results for PRE ORDER items.
 exports.pre_order_list = function (req, res) {
-	Item.find({ category: 'pre-order' }, "title image")
+	Item.find({ category: 'pre-order' }, "title image price")
 		.sort({ title: 1 })
 		.populate("artist")
 		.exec(function (err, list_items) {
@@ -95,7 +95,7 @@ exports.pre_order_list = function (req, res) {
 
 // Display search results for HARDLY ART items.
 exports.hardly_art_list = function (req, res) {
-	Item.find({ label: 'Hardly Art' }, "title image")
+	Item.find({ label: 'Hardly Art' }, "title image price")
 		.sort({ title: 1 })
 		.populate("artist")
 		.exec(function (err, list_items) {
@@ -108,7 +108,7 @@ exports.hardly_art_list = function (req, res) {
 
 // Display search results for OR PERHAPS COMEDY items.
 exports.comedy_list = function (req, res) {
-	Item.find({ label: 'Or Perhaps Comedy' }, "title image")
+	Item.find({ label: 'Or Perhaps Comedy' }, "title image price")
 		.sort({ title: 1 })
 		.populate("artist")
 		.exec(function (err, list_items) {
@@ -121,7 +121,7 @@ exports.comedy_list = function (req, res) {
 
 // Display search results for OTHER LABELS items.
 exports.other_labels_list = function (req, res) {
-	Item.find({ label: { $nin: ['Sub Pop', 'Hardly Art', 'Or Perhaps Comedy'] } }, "title image")
+	Item.find({ label: { $nin: ['Sub Pop', 'Hardly Art', 'Or Perhaps Comedy'] } }, "title image price")
 		.sort({ title: 1 })
 		.populate("artist")
 		.exec(function (err, list_items) {
@@ -132,9 +132,23 @@ exports.other_labels_list = function (req, res) {
 		});
 };
 
+// Display search results for NEW RELEASE items.
+exports.new_releases = function (req, res) {
+	Item.find({ releaseDate: { $gte: new Date(2022, 0, 0) } }, "title image price")
+		.sort({ title: 1 })
+		.populate("artist")
+		.exec(function (err, list_items) {
+			if (err) {
+				return next(err);
+			}
+			res.render("item_list", { title: "New Releases", item_list: list_items });
+		});
+};
+
 // Display detail page for GIFT CARDS.
 exports.gift_cards = function (req, res) {
 	res.render("layout", {
+		title: 'Gift Cards',
 		message: "Gift cards not currently available."
 	});
 };

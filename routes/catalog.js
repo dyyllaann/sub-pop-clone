@@ -10,7 +10,6 @@ var search_controller = require("../controllers/searchController");
 var apparel_controller = require("../controllers/apparelController");
 var goods_controller = require("../controllers/goodsController");
 var clearance_controller = require("../controllers/clearanceController");
-var login_controller = require("../controllers/loginController");
 
 /// ITEM ROUTES ///
 
@@ -43,6 +42,9 @@ router.get("/items", item_controller.item_list);
 
 /// ARTIST ROUTES ///
 
+// Get request for FEATURED ARTISTS
+router.get("/featured-artists", artist_controller.featured_artists);
+
 // GET request for creating Artist. NOTE This must come before route for id (i.e. display artist).
 router.get("/artists/create", artist_controller.artist_create_get);
 
@@ -67,11 +69,6 @@ router.get("/artists/:id", search_controller.item_list);
 // GET request for list of all Artists.
 router.get("/artists", artist_controller.artist_list);
 
-// SUB POP RELEASES ROUTES //
-
-// GET request for list of all SUB POP RELEASES items.
-router.get("/sub-pop-releases", subpop_releases.item_list);
-
 // APPAREL ROUTES // 
 
 // GET request for list of all APPAREL items.
@@ -87,31 +84,30 @@ router.get("/goods", goods_controller.item_list);
 // GET request for list of all CLEARANCE items.
 router.get("/clearance", clearance_controller.item_list);
 
-// PRE ORDER ROUTES //
-
-// GET request for list of all CLEARANCE items.
-router.get("/pre-orders", item_controller.pre_order_list);
-
-// HARDLY ART ROUTES //
-
-// GET request for list of all CLEARANCE items.
-router.get("/hardly-art", item_controller.hardly_art_list);
-
-// OTHER LABELS ROUTES //
-
-// GET request for list of all CLEARANCE items.
-router.get("/other-labels", item_controller.other_labels_list);
-
-// OR PERHAPS COMEDY ROUTES //
-
-// GET request for list of all CLEARANCE items.
-router.get("/comedy", item_controller.comedy_list);
-
 // GIFT CARD ROUTES //
 
 // GET request for list of all CLEARANCE items.
 router.get("/gift-cards", item_controller.gift_cards);
 
+// MUSIC ROUTES //
+
+// GET request for list of all PRE ORDER items.
+router.get("/pre-orders", item_controller.pre_order_list);
+
+// GET request for list of all NEW RELEASES items.
+router.get("/new-releases", item_controller.new_releases);
+
+// GET request for list of all SUB POP RELEASES items.
+router.get("/sub-pop-releases", subpop_releases.item_list);
+
+// GET request for list of all CLEARANCE items.
+router.get("/hardly-art", item_controller.hardly_art_list);
+
+// GET request for list of all OTHER LABELS items.
+router.get("/other-labels", item_controller.other_labels_list);
+
+// GET request for list of all CLEARANCE items.
+router.get("/comedy", item_controller.comedy_list);
 
 // /// GENRE ROUTES ///
 

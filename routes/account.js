@@ -8,6 +8,8 @@ router.get("/login", login_controller.login);
 // // GET login post page.
 // router.post("/login", login_controller.login_post);
 
+router.get("/create-account", login_controller.create_account);
+
 // GET info page.
 router.get("/info", login_controller.info);
 

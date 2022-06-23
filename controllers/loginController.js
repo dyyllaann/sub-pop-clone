@@ -17,6 +17,13 @@ exports.login = function (req, res) {
 // 	})
 // }
 
+exports.create_account = function (req, res) {
+	res.render("layout", {
+		title: "Create Account",
+		message: "Account creation is not currently active. If you have admin credentials, please use those."
+	})
+}
+
 exports.info = function (req, res) {
 	res.render("info", {
 		title: "Login Info"
