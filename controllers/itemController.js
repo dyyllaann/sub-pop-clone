@@ -9,34 +9,39 @@ var async = require("async");
 // 	})
 // }
 
-exports.index = function (req, res) {
-	async.parallel(
-		{
-			item_count: function (callback) {
-				Item.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
-			},
-			// item_instance_count: function (callback) {
-			// 	ItemInstance.countDocuments({}, callback);
-			// },
-			// item_instance_available_count: function (callback) {
-			// 	ItemInstance.countDocuments({ status: "Available" }, callback);
-			// },
-			artist_count: function (callback) {
-				Artist.countDocuments({}, callback);
-			},
-			// genre_count: function (callback) {
-			// 	Genre.countDocuments({}, callback);
-			// },
-		},
-		function (err, results) {
-			res.render("index", {
-				title: "Sub Pop Mega Mart",
-				error: err,
-				data: results,
-			});
-		}
-	);
-};
+// exports.index = function (req, res) {
+// 	// async.parallel(
+// 	// 	{
+// 	// 		// Display search results for NEW RELEASE items.
+// 	// 		new_releases: function (callback) {
+// 	// 			Item.find({ releaseDate: { $gte: new Date(2022, 0, 0) } }, "title image price")
+// 	// 			.sort({ title: 1 })
+// 	// 			.populate("artist")
+// 	// 			.exec(callback)
+// 	// 		},
+// 	// 	},
+// 	// 	function (err, results) {
+// 	// 		if (err) {
+// 	// 			return next(err);
+// 	// 		}
+// 	// 		res.render("index", {
+// 	// 			title: "Sub Pop Mega Mart",
+// 	// 			error: err,
+// 	// 			data: results,
+// 	// 			item_list: results.new_releases
+// 	// 		});
+// 	// 	}
+// 	// );
+// 		Item.find({ category: "album" }, "title image price")
+// 			.sort({ title: 1 })
+// 			.populate("artist")
+// 			.exec(function (err, list_items) {
+// 				if (err) {
+// 					return next(err);
+// 				}
+// 				res.render("index", { title: "All asdfsdfsadf", item_list: list_items });
+// 			}); 
+// };
 
 // Display list of all items.
 exports.item_list = function (req, res) {
