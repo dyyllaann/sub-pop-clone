@@ -195,18 +195,33 @@ ul {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-auto-rows: 45%;
   column-gap: 30px;
   row-gap: 30px;
 }
 
 @media screen and (min-width: 400px) {
+  .header-bar__module {
+    display: none;
+  }
+
+  .header-nav {
+      display: none;
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 0.5fr);
   }
 }
 
 @media screen and (min-width: 800px) {
+  .header-bar__module {
+    display: block;
+  }
+
+  .header-nav {
+      display: block;
+  }
+
   .product-grid {
     grid-template-columns: repeat(4, 0.5fr);
   }
@@ -341,6 +356,7 @@ ul {
 
 #logo {
   width: 500px;
+  max-width: 100%;
 }
 
 .footer {
