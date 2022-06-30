@@ -13,8 +13,8 @@ var clearance_controller = require("../controllers/clearanceController");
 
 /// ITEM ROUTES ///
 
-// GET catalog home page.
-router.get("/", item_controller.index);
+// // GET catalog home page.
+// router.get("/", item_controller.index);
 
 // GET request for creating a Item. NOTE This must come before routes that display Item (uses id).
 router.get("/item/create", item_controller.item_create_get);
