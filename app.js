@@ -10,6 +10,8 @@ var indexRouter = require('./routes/index');
 var accountRouter = require('./routes/account');
 var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
 
+app.use(favicon(path.join(__dirname, "public", "favicon.ico"))); 
+
 var app = express();
 
 //Set up mongoose connection
