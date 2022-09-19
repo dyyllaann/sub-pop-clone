@@ -24,7 +24,7 @@ exports.index = function (req, res) {
 
 // Display list of all results.
 exports.item_list = function (req, res) {
-	Item.find({ label: 'Sub Pop', category: 'album' }, "title image")
+	Item.find({ label: 'Sub Pop', category: 'album' }, "title image price")
 		.sort({ title: 1 })
 		.populate("artist")
 		.exec(function (err, list_items) {
